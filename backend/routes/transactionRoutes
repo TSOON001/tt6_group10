@@ -6,7 +6,7 @@ import { postTransaction } from "../controllers/transactionController.js"
 // Set up the router
 const router = express.Router();
 
-walletRoutes.post('/', postTransaction)
+transactionRoutes.post('/transactions/post', postTransaction)
 
 export const transactionRoutes = router;
 

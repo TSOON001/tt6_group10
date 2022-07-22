@@ -6,8 +6,8 @@ import { deleteWallet } from "../controllers/walletController.js"
 // Set up the router
 const router = express.Router();
 
-walletRoutes.get('/', getWallets)
+walletRoutes.get('/wallets', getWallets)
 
-walletRoutes.delete('/', deleteWallet)
+walletRoutes.delete('/wallets/delete/:id', deleteWallet)
 
 export const walletRoutes = router;
