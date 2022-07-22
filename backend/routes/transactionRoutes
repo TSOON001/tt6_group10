@@ -1,7 +1,12 @@
 import express from "express";
 import { check } from "express-validator";
+import { postTransaction } from "../controllers/transactionController.js"
+
 
 // Set up the router
 const router = express.Router();
 
+walletRoutes.post('/', postTransaction)
+
 export const transactionRoutes = router;
+

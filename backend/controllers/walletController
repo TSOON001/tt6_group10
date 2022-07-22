@@ -1,0 +1,12 @@
+let wallets = [];
+
+
+export const getWallets = (req, res) => {
+    res.send(wallets)
+};
+
+export const deleteWallet = (req, res) => {
+    console.log(`Wallet ${req.params.id} has been deleted`);
+    
+    wallets = wallets.filter((wallet) => wallet.id !== req.params.id);
+}

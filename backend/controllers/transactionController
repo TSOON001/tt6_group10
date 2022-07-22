@@ -1,0 +1,13 @@
+let transactions = [];
+
+export const getTransactions = (req, res) => {
+    res.send(transactions)
+};
+
+export const postTransaction = (req, res) => {   
+    const transaction = req.body;
+
+    transactions.push(...transaction);
+    
+    console.log(`Transaction [${transaction.id}] added to the database.`);
+};
